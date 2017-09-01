@@ -122,8 +122,15 @@ array.each do |value|
 end
 
 # Write a method called read_article that randomly selects an article and increases the articles "views" by one each time it's randomly selected.
+def read_article(array)
+  article = array.sample
+  article["views"] += 1
+  puts
+  puts "The views count for article: '#{article[:webTitle]}' has been updated to #{article["views"]}"
+  puts
+end
 
-
+read_article(array)
 
 
 # puts hash[:response][:results]
