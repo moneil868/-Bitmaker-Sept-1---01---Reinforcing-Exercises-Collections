@@ -125,12 +125,22 @@ end
 def read_article(array)
   article = array.sample
   article["views"] += 1
-  puts
-  puts "The views count for article: '#{article[:webTitle]}' has been updated to #{article["views"]}"
-  puts
 end
 
-read_article(array)
+5.times do
+  read_article(array)
+end
+
+# Write a method called display_views that iterates through the articles and displays their titles and view counts, like so:
+# Try calling read_article several times and then display_views to verify that your code works.
+
+def display_views(array)
+  array.each do |article|
+    puts "The views count for article: '#{article[:webTitle]}' has been updated to #{article["views"]}"
+  end
+end
+
+display_views(array)
 
 
 # puts hash[:response][:results]
