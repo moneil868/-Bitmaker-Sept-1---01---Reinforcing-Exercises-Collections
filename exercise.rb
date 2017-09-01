@@ -116,8 +116,14 @@ hash = {
 }
 
 # Add another key-value pair to each article where the key is "views" and the value is 0.
-hash[:response][:results].each do |value|
+array = hash[:response][:results]
+array.each do |value|
   value["views"] = 0
 end
+
+# Write a method called read_article that randomly selects an article and increases the articles "views" by one each time it's randomly selected.
+
+
+
 
 # puts hash[:response][:results]
